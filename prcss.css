@@ -1,0 +1,308 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eaeaea;
+  background-image: url('https://png.pngtree.com/background/20211217/original/pngtree-geometric-pattern-white-gold-minimalist-creative-background-picture-image_1575961.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* Header slideshow */
+header {
+  position: relative; 
+  height: 400px;
+  color:white;
+  padding: 60px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  animation: bgSlide 15s infinite;
+}
+
+/* Slideshow animation */
+@keyframes bgSlide {
+  0%   { background-image: url('https://media.baovanhoa.vn/zoom/1000/uploaded/nghiemthanh/2024_10_07/hai_phong_nhung_dem_khong_ngu_UDTT.jpg'); }
+  33%  { background-image: url('https://www.vietnambooking.com/wp-content/uploads/2023/04/tuyen-diem-du-lich-viet-nam-4.jpg'); }
+  66%  { background-image: url('https://puolotrip.com/images/pro/package-tour-da-lat-3-ngay-3-dem--3F9Q_1480.png'); }
+  100% { background-image: url('https://ngaodu.com.vn/wp-content/uploads/2024/11/du-lich-da-lat-4n3d-01.jpg'); }
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image {
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.hobby {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.5);
+}
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid #2c3e50;
+}
+
+.timeline .year {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.timeline .content h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #34495e;
+}
+
+.timeline .content p {
+  margin: 5px 0 0;
+  color: #555;
+}
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.exp-img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.exp-img:hover {
+  transform: scale(1.05);
+}
+
+.exp-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.exp-text h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+.exp-text p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+.japan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #eef6f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.japan-img {
+  width: 180px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 6px;
+}
+
+.japan-text h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.japan-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
+}
+.tabs-container {
+  max-width: 900px;
+  margin: 30px auto;
+  position: relative;
+  z-index: 1;
+}
+.tab-content {
+  display: none;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+  border: 1px solid rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 30px auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.tab-content:target {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.tabs a {
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.tabs a:hover {
+  background: #0056b3;
+}
+
+.tab-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #007bff;
+}
+
+.tab-content p, .tab-content ul {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.tab-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-content ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs button {
+    width: 90%;
+    margin: 5px 0;
+  }
+
+  .tab-content {
+    padding: 20px;
+  }
+}
