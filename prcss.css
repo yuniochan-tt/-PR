@@ -12,7 +12,6 @@ body {
   background-attachment: fixed;
 }
 
-
 /* Header slideshow */
 header {
   position: relative; 
@@ -44,7 +43,6 @@ header > * {
   position: relative;
   z-index: 1;
 }
-
 
 header h1 {
   font-size: 2.5em;
@@ -90,6 +88,7 @@ li {
   padding-top: 10px;
   border-top: 1px solid rgba(255,255,255,0.5);
 }
+
 .gallery {
   display: flex;
   gap: 15px;
@@ -110,6 +109,7 @@ li {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -140,6 +140,7 @@ li {
   margin: 5px 0 0;
   color: #555;
 }
+
 .experience {
   display: flex;
   flex-wrap: wrap;
@@ -181,6 +182,7 @@ li {
   color: #555;
   line-height: 1.6;
 }
+
 .japan {
   display: flex;
   align-items: center;
@@ -208,12 +210,14 @@ li {
   font-size: 1rem;
   color: #34495e;
 }
+
 .tabs-container {
   max-width: 900px;
   margin: 30px auto;
   position: relative;
   z-index: 1;
 }
+
 .tab-content {
   display: none;
   background: #fff;
@@ -227,11 +231,13 @@ li {
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .tab-content:target {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
+
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -279,6 +285,7 @@ li {
   padding: 6px 0;
   border-bottom: 1px solid #eee;
 }
+
 a {
   color: #007bff;
   text-decoration: none;
@@ -287,6 +294,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ✅ Responsive fix for mobile */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2em;
@@ -294,15 +303,45 @@ a:hover {
 
   .tabs {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .tabs button {
-    width: 90%;
+  .tabs a {
+    width: 100%;
     margin: 5px 0;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 14px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
   .tab-content {
     padding: 20px;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experience {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .japan {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .japan-img {
+    width: 100%;
+    margin: 0 0 1rem 0;
   }
 }
